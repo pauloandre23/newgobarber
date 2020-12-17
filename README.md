@@ -31,6 +31,8 @@
 
 GoBarber App - You can now schedule your haircut and shave services. 
 
+Currently using Docker to host Postgres, Redis and MongoDB containers.
+
 ## Tecnologies :rocket:
 
 #### Back-end
