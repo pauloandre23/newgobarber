@@ -1,10 +1,9 @@
-# newgobarber
-backend for the gobarber both site and app
 
-<h1>Project Title</h1>
+
+<h1>Backend for GoBarber app</h1>
 
 <p align="center">
-<image src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DnB8QChMDD4E&psig=AOvVaw34h0cNHW9kXxSE0PoR9MVh&ust=1608298754631000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCPCJ3O-Q1e0CFQAAAAAdAAAAABAD"/></br>
+<image src="https://image.freepik.com/free-vector/barber-shop-booking-app-template_23-2148554942.jpg"/></br>
 <label>Logo</label>
 </p>
 
@@ -17,10 +16,9 @@ backend for the gobarber both site and app
 </p>
 
 <p align="center">
-<image src="https://img.shields.io/badge/Custom-shields%20here-red"/>
+<image src="https://image.freepik.com/free-vector/barber-shop-booking-app-template_23-2148554942.jpg"/>
 </p>
 
-Click [here](https://shields.io/) and select shields for you project
 
 ## Presentation of Project :sparkles:
 
