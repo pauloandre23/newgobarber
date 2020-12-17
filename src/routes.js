@@ -1,15 +1,38 @@
 import {Router} from 'express';
-import User from './app/models/User';
+import multerConfig from './config/multer';
+import multer from 'multer';
+
+import UserController from './app/controllers/UserController';
+import SessionController from './app/controllers/SessionController';
+import authMiddleware from './app/middlewares/auth'; 
+import FileController from './app/controllers/FileController';
+import ProviderController from './app/controllers/ProviderController';
+import AppointmentController from './app/controllers/AppointmentController';
+import AvailableController from './app/controllers/AvailableController';
+
+import ScheduleController from './app/controllers/ScheduleController';
+import NotificationController from './app/controllers/NotificationController';
 
 const routes = new Router();
+const upload = multer(multerConfig);
 
-routes.get('/', async (req,res)=>{
-    const user = await User.create({
-        name: 'paulo',
-        email: 'paulo@gowdock.com',
-        password_hash: '1423412342',
-    });
+routes.post('/users', UserController.store);
+routes.post('/sessions', SessionController.store);
 
-    return res.json(user);
-})
+routes.use(authMiddleware);
+
+routes.put('/users', UserController.update);
+routes.post('/files', upload.single('file'), FileController.store);
+routes.post('/appointments', AppointmentController.store);
+routes.get('/appointments', AppointmentController.index);
+
+routes.get('/providers', ProviderController.index);
+routes.get('/providers/:providerId/available', AvailableController.index);
+
+routes.get('/notifications', NotificationController.index);
+routes.put('/notifications/:id', NotificationController.update);
+routes.delete('/appointments/:id', AppointmentController.delete);
+routes.get('/schedule', ScheduleController.index);
+
+
 export default routes;
