@@ -1,5 +1,8 @@
 import Appointment from '../models/Appointment';
 import User from '../models/User';
+import { parseISO, startOfDay } from 'date-fns';
+import { Op } from 'sequelize';
+import { endOfDay } from 'date-fns';
 
 class ScheduleController {
     async index(req, res) {
@@ -11,9 +14,14 @@ class ScheduleController {
         }
 
         const { date } = req.query
+        const parsedDate = parseISO(date);
 
         const appointments = await Appointment.findAll({
-            where: { date: date, provider_id: req.userId, cancelled_at: null}
+            where: { 
+                date: {[Op.between]: [startOfDay(parsedDate), endOfDay(parsedDate)]},
+                provider_id: req.userId,
+                cancelled_at: null
+            }
         })
         if (!appointments) {
             return res.json({ error: 'Não existem agendamentos com esse prestador'});

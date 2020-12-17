@@ -3,9 +3,12 @@ import User from '../models/User';
 import File from '../models/File';
 import pt from 'date-fns/locale/pt';
 import Notification from '../schemas/Notification';
+import Queue from '../../lib/Queue';
 
-import {startOfHour, parseISO, isBefore, format, subHours} from 'date-fns';
+import {startOfHour, parseISO, format, subHours, isBefore} from 'date-fns';
 import * as Yup from 'yup';
+import CancellationMail from '../jobs/CancellationMail';
+
 class AppointmentController {
     async index (req, res) {
         const { page = 1 } = req.query;
@@ -100,6 +103,35 @@ class AppointmentController {
 
         return res.json(appointment);
     }
+    async delete(req, res) {
+        const appointment = await Appointment.findByPk(req.params.id, {
+            include: [
+                {
+                    model: User,
+                    as: 'provider',
+                    attributes: ['name', 'email']
+                }
+            ]
+        });
+
+        if (appointment.user_id !== req.userId) {
+            return res.status(401).json({error: 'Usuário sem permissões'}); 
+        }
+        const dateWithSub = subHours(appointment.date, 2);
+
+        if (isBefore(dateWithSub, new Date())) {
+            return res.status(401).json({error: 'Horário fora do intervalo limite de cancelamento.'})
+        }
+        appointment.cancelled_at = new Date();
+        await appointment.save();
+
+        await Queue.add(CancellationMail.key, {
+            appointment,
+        })
+         
+        return res.json(appointment);
+    }
+
 }
 
 export default new AppointmentController();
