@@ -21,7 +21,7 @@
 ## Presentation of Project :sparkles:
 
 <p align="center">
-<image src="https://image.freepik.com/free-vector/barber-shop-booking-app-template_23-2148554942.jpg" />
+<image src="https://imgur.com/DmwjUKg" />
 </p>
 
 ---
