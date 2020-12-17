@@ -23,7 +23,7 @@
 ## Presentation of Project :sparkles:
 
 <p align="center">
-<image src="https://user-images.githubusercontent.com/39461509/85029714-f8edf380-b152-11ea-86a6-ec196309ae34.png" />
+<image src="https://image.freepik.com/free-vector/barber-shop-booking-app-template_23-2148554942.jpg" />
 </p>
 
 ---
