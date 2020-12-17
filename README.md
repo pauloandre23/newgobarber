@@ -3,7 +3,7 @@
 <h1>Backend for GoBarber app</h1>
 
 <p align="center">
-<image src="https://image.freepik.com/free-vector/barber-shop-booking-app-template_23-2148554942.jpg"/></br>
+<image src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fgithub.com%2Fmayconfrancisco%2Fbarber-mobile&psig=AOvVaw06tp_SAZ8vKhAraLDJgslg&ust=1608298920805000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCMjTrcKR1e0CFQAAAAAdAAAAABAJ"/></br>
 <label>Logo</label>
 </p>
 
@@ -15,9 +15,7 @@
   <a href="#license-scroll">License</a>&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;
 </p>
 
-<p align="center">
-<image src="https://image.freepik.com/free-vector/barber-shop-booking-app-template_23-2148554942.jpg"/>
-</p>
+
 
 
 ## Presentation of Project :sparkles:
@@ -61,5 +59,5 @@ GoBarber App - You can now schedule your haircut and shave services.
 
 ---
 
-##### <p align="center"> <strong> < develop by <a href="#"> @pauloandre23  </a> /> </strong>  :wave:
+##### <p align="center"> <strong> < developed by <a href="#"> @pauloandre23  </a> /> </strong>  :wave:
 
