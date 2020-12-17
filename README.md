@@ -3,7 +3,7 @@
 <h1>Backend for GoBarber app</h1>
 
 <p align="center">
-<image src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fgithub.com%2Fmayconfrancisco%2Fbarber-mobile&psig=AOvVaw06tp_SAZ8vKhAraLDJgslg&ust=1608298920805000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCMjTrcKR1e0CFQAAAAAdAAAAABAJ"/></br>
+<image src="https://www.cleverfiles.com/howto/wp-content/uploads/2018/03/minion.jpg"/></br>
 <label>Logo</label>
 </p>
 
