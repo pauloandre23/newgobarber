@@ -21,7 +21,7 @@
 ## Presentation of Project :sparkles:
 
 <p align="center">
-<image src="https://imgur.com/DmwjUKg" />
+<image src="https://imgur.com/DmwjUKg.png" />
 </p>
 
 ---
