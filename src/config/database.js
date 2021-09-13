@@ -3,7 +3,7 @@ module.exports = {
   host: 'localhost',
   username: 'postgres',
   password: 'bootcampdeploy',
-  database: 'gobarber',
+  database: 'bootcampnodejs',
   define: {
       timestamps: true,
       underscored: true,
